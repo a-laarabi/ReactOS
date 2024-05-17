@@ -22,9 +22,9 @@ const Navbar = () => {
       return () => clearInterval(intervalID);
   }, []);
 
-  useEffect(() => {
-    console.log('setTime', currentTime)
-  }, [currentTime])
+  // useEffect(() => {
+  //   console.log('setTime', currentTime)
+  // }, [currentTime])
 
   return (
     <div className='flex justify-between bg-transparent backdrop-blur-3xl shadow-sm px-2 font-sanfranciscoRegular text-[14px]'>

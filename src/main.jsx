@@ -5,6 +5,8 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <div className='home-background w-full h-full min-h-[100vh]'>
+      <App />
+    </div>
   </React.StrictMode>,
 )

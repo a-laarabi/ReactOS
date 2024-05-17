@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#root {
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+#root *{
+    cursor: default;
+}
+
+.home-background {
+    background-image: url('./assets/home_back.jpeg');
+    background-size: cover;
+}
+
+@font-face {
+    font-family: 'sanfranciscoLight';
+    src: url('./assets/fonts/SFUIDisplay-Light.ttf');
+}
+
+@font-face {
+    font-family: 'sanfranciscoRegular';
+    src: url('./assets/fonts/SFUIDisplay-Regular.otf');
+}
+
+@font-face {
+    font-family: 'sanfranciscoMedium';
+    src: url('./assets/fonts/SFUIDisplay-Medium.otf');
+}
+
+@font-face {
+    font-family: 'sanfranciscoBold';
+    src: url('./assets/fonts/SFUIDisplay-Bold.ttf');
+}
