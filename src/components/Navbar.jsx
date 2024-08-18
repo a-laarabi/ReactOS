@@ -5,12 +5,15 @@ import { FaWifi, FaSearch } from "react-icons/fa";
 import { BsToggles2 } from "react-icons/bs";
 import siriLogo from '../assets/Siri_logo.png'
 import { format } from 'date-fns';
+import { useSelector } from 'react-redux';
 
 
 
 const Navbar = () => {
 
   const [currentTime, setCurrentTime] = useState(format(new Date(), 'eee dd LLL HH:mm'));
+
+  const navbarItems = useSelector((state)=> state.nav)
 
   useEffect(() => {
       const intervalID = setInterval(() => {
@@ -22,21 +25,14 @@ const Navbar = () => {
       return () => clearInterval(intervalID);
   }, []);
 
-  // useEffect(() => {
-  //   console.log('setTime', currentTime)
-  // }, [currentTime])
 
   return (
     <div className='flex justify-between bg-transparent backdrop-blur-3xl shadow-sm px-2 font-sanfranciscoRegular text-[14px]'>
       <div className='flex gap-5 items-center text-white'>
         <div><FaApple /></div>
-        <div className='font-sanfranciscoMedium'>Finder</div>
-        <div>File</div>
-        <div>Edit</div>
-        <div>View</div>
-        <div>Go</div>
-        <div>Window</div>
-        <div>Help</div>
+        {navbarItems.map((nav, i) => (
+          <div key={i}>{nav}</div>
+        ))}
       </div>
       <div className='flex gap-5 items-center text-white'>
         <div></div>
